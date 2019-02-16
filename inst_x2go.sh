@@ -10,7 +10,8 @@ echo "deb http://packages.x2go.org/debian jessie main" > /etc/apt/sources.list.d
 echo "deb http://archives.packages.x2go.org/debian jessie extras main" >> /etc/apt/sources.list.d/x2go.list
 echo "deb-src http://archives.packages.x2go.org/debian jessie extras main" >> /etc/apt/sources.list.d/x2go.list
 apt-get update -y
-apt-get install x2go-keyring && apt-get update -y
+apt-get install x2go-keyring -y
+apt-get update -y
 apt-get install x2goserver x2goserver-xsession -y
 apt-get install xfce4 iceweasel -y
 service x2goserver status
