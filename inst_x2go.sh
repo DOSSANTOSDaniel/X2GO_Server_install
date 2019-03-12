@@ -25,8 +25,10 @@ fi
 
 case $ch in
 1) echo "deb http://packages.x2go.org/debian stretch extras main" > /etc/apt/sources.list.d/x2go.list
+echo "deb-src http://packages.x2go.org/debian stretch extras main" >> /etc/apt/sources.list.d/x2go.list
 ;;
 2) echo "deb http://packages.x2go.org/debian/ jessie main contrib" > /etc/apt/sources.list.d/x2go.list
+echo "deb-src http://packages.x2go.org/debian jessie main contrib" >> /etc/apt/sources.list.d/x2go.list
 ;;
 *) error "choix non proposé !"
 esac
