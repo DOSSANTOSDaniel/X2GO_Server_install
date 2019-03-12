@@ -7,7 +7,30 @@ clear
 echo -e "\n Début de l'installation \n"
 apt-get install dirmngr -y
 apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
-echo "deb http://packages.x2go.org/debian/ jessie main contrib" > /etc/apt/sources.list.d/x2go.list
+clear
+echo ''
+echo "Quelle est votre version de Debian ?"	
+echo '------------------------------------'
+echo '[1] Debien stretch 9'
+echo '[2] Debien jessie 8'
+echo ''
+read -p " votre choix : " ch
+
+# -z si le champ est vide
+if [ -z "$ch" ] || [[ "$ch" != [1-2] ]]
+	then
+		error "Argument non pris en charge !" "seules arguments autorisés de [1] à [2] !"
+  exit 1
+fi
+
+case $ch in
+1) echo "deb http://packages.x2go.org/debian stretch extras main" > /etc/apt/sources.list.d/x2go.list
+;;
+2) echo "deb http://packages.x2go.org/debian/ jessie main contrib" > /etc/apt/sources.list.d/x2go.list
+;;
+*) error "choix non proposé !"
+esac
+
 apt-get update
 sleep 1
 clear
