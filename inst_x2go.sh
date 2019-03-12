@@ -5,6 +5,7 @@
 #Source: https://wiki.x2go.org/doku.php/doc:installation:x2goserver
 clear
 echo -e "\n Début de l'installation \n"
+apt-get install dirmngr -y
 apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
 echo "deb http://packages.x2go.org/debian/ jessie main contrib" > /etc/apt/sources.list.d/x2go.list
 apt-get update -y
