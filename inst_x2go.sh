@@ -43,6 +43,6 @@ aptitude install x2goserver x2goserver-xsession -y
 apt-get install xfce4 iceweasel -y
 sleep 1
 clear
-service x2goserver status
+
 echo -e "\n Installation terminé, si le service X2GO n'a pas démarré taper 'service x2goserver start' \n"
 service --status-all | grep x2goserver
