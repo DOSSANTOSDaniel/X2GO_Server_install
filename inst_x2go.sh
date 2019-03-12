@@ -19,7 +19,7 @@ read -p " votre choix : " ch
 # -z si le champ est vide
 if [ -z "$ch" ] || [[ "$ch" != [1-2] ]]
 	then
-		error "Argument non pris en charge !" "seules arguments autorisés de [1] à [2] !"
+		echo -e "\n Argument non pris en charge !" "seules arguments autorisés de [1] à [2] ! \n"
   exit 1
 fi
 
