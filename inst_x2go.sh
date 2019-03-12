@@ -11,8 +11,8 @@ clear
 echo ''
 echo "Quelle est votre version de Debian ?"	
 echo '------------------------------------'
-echo '[1] Debien stretch 9'
-echo '[2] Debien jessie 8'
+echo '[1] Debien stretch'
+echo '[2] Debien jessie'
 echo ''
 read -p " votre choix : " ch
 
