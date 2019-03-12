@@ -15,11 +15,11 @@ apt-get install x2go-keyring -y
 apt-get update
 sleep 1
 clear
-apt-get install x2goserver x2goserver-xsession -y
+apt-get install aptitude -y
+aptitude install x2goserver x2goserver-xsession -y
 apt-get install xfce4 iceweasel -y
 sleep 1
 clear
 service x2goserver status
 echo -e "\n Installation terminé, si le service X2GO n'a pas démarré taper 'service x2goserver start' \n"
-echo -e " Service X2GO server démarré! \n"
 service --status-all | grep x2goserver
