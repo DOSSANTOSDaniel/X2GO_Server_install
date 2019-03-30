@@ -6,7 +6,6 @@
 clear
 echo -e "\n Début de l'installation \n"
 apt-get install dirmngr -y
-apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
 clear
 echo ''
 echo "Quelle est votre version de Debian ?"	
@@ -37,11 +36,11 @@ apt-get update
 sleep 1
 clear
 apt-get install x2go-keyring -y
+apt-key adv --recv-keys --keyserver keys.gnupg.net E1F958385BFE2B6E
 apt-get update
 sleep 1
 clear
-apt-get install aptitude -y
-aptitude install x2goserver x2goserver-xsession -y
+apt-get install x2goserver x2goserver-xsession -y
 apt-get install xfce4 iceweasel -y
 sleep 1
 clear
