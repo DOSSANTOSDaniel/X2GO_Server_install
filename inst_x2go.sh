@@ -25,7 +25,7 @@ read -p " votre choix : " ch
 # -z si le champ est vide
 if [ -z "$ch" ] || [[ "$ch" != [1-2] ]]
 	then
-		echo -e "\n Argument non pris en charge !" "seules arguments autorisés de [1] à [2] ! \n"
+		echo -e "\n Argument non pris en charge !" "seuls arguments autorisés de [1] à [2] ! \n"
   exit 1
 fi
 
@@ -56,5 +56,5 @@ apt-get install iceweasel -y
 apt install xfce4-terminal -y
 sleep 1
 clear
-echo -e "\n Installation terminé, si le service X2GO n'a pas démarré taper 'service x2goserver start' \n"
+echo -e "\n Installation terminée, si le service X2GO n'a pas démarré taper 'service x2goserver start' \n"
 service --status-all | grep x2goserver
